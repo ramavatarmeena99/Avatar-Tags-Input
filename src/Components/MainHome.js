@@ -11,9 +11,6 @@ export default function MainHome() {
       setTags([...tags, tagValue]);
       setTagValue("");
     }
-    if(tagValue === ""){
-        alert("Write some tag and press enter")
-    }
   };
 
   const deletTag = (val) => {
@@ -23,21 +20,14 @@ export default function MainHome() {
   const onChange = (e) => {
     let value = e.target.value;
     setTagValue(value);
-   
   };
   return (
     <Main>
       {tags.map((item, index) => {
         return (
-          <Button
-            key={index}
-          >
+          <Button key={index}>
             {item}
-            <Span
-              onClick={() => deletTag(item)}
-            >
-              {<MdClose />}
-            </Span>
+            <Span onClick={() => deletTag(item)}>{<MdClose />}</Span>
           </Button>
         );
       })}
@@ -63,21 +53,21 @@ const Main = styled.div`
 `;
 
 const Button = styled.button`
-width: auto; 
-height:35px;
-padding: 0px 10px;
-font-size:18px;
+  width: auto;
+  height: 35px;
+  padding: 0px 10px;
+  font-size: 18px;
 `;
 
 const Input = styled.input`
-width:30%;
-height:35px;
-border:1px solid black;
-font-size:18px;
-padding-left:5px;
+  width: 30%;
+  height: 35px;
+  border: 1px solid black;
+  font-size: 18px;
+  padding-left: 5px;
 `;
 
 const Span = styled.span`
-color: red; 
-cursor:pointer;
+  color: red;
+  cursor: pointer;
 `;
