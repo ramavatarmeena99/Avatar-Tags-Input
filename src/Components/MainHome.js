@@ -11,6 +11,9 @@ export default function MainHome() {
       setTags([...tags, tagValue]);
       setTagValue("");
     }
+    if(tagValue === ""){
+        alert("Write some tag and press enter")
+    }
   };
 
   const deletTag = (val) => {
@@ -20,6 +23,7 @@ export default function MainHome() {
   const onChange = (e) => {
     let value = e.target.value;
     setTagValue(value);
+   
   };
   return (
     <Main>
