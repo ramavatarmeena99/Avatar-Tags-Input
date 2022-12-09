@@ -57,6 +57,9 @@ const Button = styled.button`
   height: 35px;
   padding: 0px 10px;
   font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 const Input = styled.input`
@@ -70,4 +73,8 @@ const Input = styled.input`
 const Span = styled.span`
   color: red;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left:5px;
 `;
