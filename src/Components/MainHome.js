@@ -23,25 +23,35 @@ export default function MainHome() {
 
   };
   return (
-    <div>
-              <div className="tagInput">
+    <div
+    style={{width:"100%",height:"93vh",display:"flex", alignItems:"flex-start", justifyContent:"center", paddingTop:"100px"}}
+    
+    >
+
           {tags.map((item, index) => {
             return (
-              <button key={index}>
+              <button key={index}
+              style={{width:"auto",height:"35px",padding:" 0px 10px"}}
+              >
                 {item}
-                <span onClick={() => deletTag(item)}>X</span>
+                <span 
+              style={{color:"red",cursor:"pointer"}}
+                
+                onClick={() => deletTag(item)}>{<MdClose/>}</span>
               </button>
             );
           })}
 
           <input
+              style={{width:"30%",height:"35px"}}
+
             type="text"
             placeholder="type and enter"
             value={tagValue}
             onChange={(e) => onChange(e)}
             onKeyDown={addTags}
           />
-        </div>
+
         
     </div>
   )
