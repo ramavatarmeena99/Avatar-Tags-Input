@@ -62,11 +62,15 @@ const Button = styled.button`
 width: auto; 
 height:35px;
 padding: 0px 10px;
+font-size:18px;
 `;
 
 const Input = styled.input`
 width:30%;
 height:35px;
+border:1px solid black;
+font-size:18px;
+padding-left:5px;
 `;
 
 const Span = styled.span`
