@@ -23,7 +23,8 @@ export default function MainHome() {
   };
   return (
     <Main>
-      {tags.map((item, index) => {
+ <DivMain>
+ {tags.map((item, index) => {
         return (
           <Button key={index}>
             {item}
@@ -39,6 +40,7 @@ export default function MainHome() {
         onChange={(e) => onChange(e)}
         onKeyDown={addTags}
       />
+ </DivMain>
     </Main>
   );
 }
@@ -51,10 +53,21 @@ const Main = styled.div`
   justify-content: center;
   padding-top: 100px;
 `;
+const DivMain = styled.div`
+  width: 50%;
+  height: auto;
+  padding:10px;
+  display: flex;
+  flex-wrap: wrap;
+  border:2px solid black;
+  border-radius:5px;
+`;
+
 
 const Button = styled.button`
   width: auto;
   height: 35px;
+  margin:1px;
   padding: 0px 10px;
   font-size: 18px;
   display: flex;
@@ -68,6 +81,8 @@ const Input = styled.input`
   border: 1px solid black;
   font-size: 18px;
   padding-left: 5px;
+  border-radius:5px;
+
 `;
 
 const Span = styled.span`
