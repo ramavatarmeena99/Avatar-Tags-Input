@@ -5,23 +5,17 @@
 create tags in reactJs 
 
 ## Features
-* -Add new contact.
-* -Edit existing contact  
-* -Delete contact.
-* -Attractive UI.
-* -Custom Sweet alert for error.
+* -Create Tag Input.
+
 
 ## Technology Stack Used In This Project
 * ReactJs
-* Redux
-* React Router
-* Redux Persist
 * JavaScript
 * Styled Components
 * HTML/CSS
 
 ## Project Live
-### [Click here](https://avtar-react-telephonic-library.netlify.app/) 
+### [Click here](https://avatartagsinput.netlify.app/) 
 
 ## Run This Project on Your Local Machine
 
@@ -31,7 +25,7 @@ create tags in reactJs
     ```
 2. Change the directory 
     ```
-    cd contact_list_app
+    cd tag_input
     ```
 3. Install
     ```
@@ -82,7 +76,7 @@ create tags in reactJs
     * If you think that something is missing from the readme file. You can introduce new sections for the readme file or can improve the existing one. 
 
 
-[Click here](https://github.com/ramavatarmeena99/Contact_List_App) to Contribute 
+[Click here](https://github.com/ramavatarmeena99/Avatar-Tags-Input) to Contribute 
 
 
 
