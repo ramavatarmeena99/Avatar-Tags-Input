@@ -6,6 +6,7 @@ create tags in reactJs
 
 ## Features
 * -Create Tag Input.
+* -Delete Tag Input.
 
 
 
