@@ -2,8 +2,7 @@
 ![](https://github.com/ramavatarmeena99/Avatar-Tags-Input/blob/main/src/Components/Assests/TAG_INPUT.png?raw=true)
 
 ## About Project
-To-do application for keeping to-do records of past, present and future.
-
+create tags in reactJs 
 
 ## Features
 * -Add new contact.
