@@ -6,10 +6,23 @@ export default function MainHome() {
   const [tagValue, setTagValue] = useState("");
   const [tags, setTags] = useState([]);
 
+
+
+
+
   const addTags = (e) => {
     if (e.keyCode === 13 && tagValue) {
+      if (isSimilarTag(tagValue)) {
+        alert("exist");
+        return;
+      }
       setTags([...tags, tagValue]);
       setTagValue("");
+    }
+  };
+  const isSimilarTag = (val) => {
+    if (tags.includes(val)) {
+      return true;
     }
   };
 
