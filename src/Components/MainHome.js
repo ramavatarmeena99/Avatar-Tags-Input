@@ -6,10 +6,6 @@ export default function MainHome() {
   const [tagValue, setTagValue] = useState("");
   const [tags, setTags] = useState([]);
 
-
-
-
-
   const addTags = (e) => {
     if (e.keyCode === 13 && tagValue) {
       if (isSimilarTag(tagValue)) {
@@ -36,24 +32,24 @@ export default function MainHome() {
   };
   return (
     <Main>
- <DivMain>
- {tags.map((item, index) => {
-        return (
-          <Button key={index}>
-            {item}
-            <Span onClick={() => deletTag(item)}>{<MdClose />}</Span>
-          </Button>
-        );
-      })}
+      <DivMain>
+        {tags.map((item, index) => {
+          return (
+            <Button key={index}>
+              {item}
+              <Span onClick={() => deletTag(item)}>{<MdClose />}</Span>
+            </Button>
+          );
+        })}
 
-      <Input
-        type="text"
-        placeholder="type and enter"
-        value={tagValue}
-        onChange={(e) => onChange(e)}
-        onKeyDown={addTags}
-      />
- </DivMain>
+        <Input
+          type="text"
+          placeholder="type and enter"
+          value={tagValue}
+          onChange={(e) => onChange(e)}
+          onKeyDown={addTags}
+        />
+      </DivMain>
     </Main>
   );
 }
@@ -69,18 +65,21 @@ const Main = styled.div`
 const DivMain = styled.div`
   width: 50%;
   height: auto;
-  padding:10px;
+  padding: 10px;
   display: flex;
   flex-wrap: wrap;
-  border:2px solid black;
-  border-radius:5px;
+  border: 2px solid black;
+  border-radius: 5px;
+  @media (max-width: 768px) {
+    width: 90%;
+    padding: 10px;
+  }
 `;
-
 
 const Button = styled.button`
   width: auto;
   height: 35px;
-  margin:1px;
+  margin: 1px;
   padding: 0px 10px;
   font-size: 18px;
   display: flex;
@@ -94,8 +93,10 @@ const Input = styled.input`
   border: 1px solid black;
   font-size: 18px;
   padding-left: 5px;
-  border-radius:5px;
-
+  border-radius: 5px;
+  @media (max-width: 768px) {
+    width: 40%;
+  }
 `;
 
 const Span = styled.span`
@@ -104,5 +105,5 @@ const Span = styled.span`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-left:5px;
+  padding-left: 5px;
 `;
